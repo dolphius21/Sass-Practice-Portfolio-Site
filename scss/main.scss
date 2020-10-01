@@ -1,13 +1,25 @@
 @import "config";
 @import "home";
 @import "menu";
+@import "about";
 
 body {
   background: $primary-color;
   color: set-color($primary-color);
-  height: 100vh;
   font-family: "Poppins", sans-serif;
   line-height: 1;
+}
+
+.page-wrapper {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+      to right,
+      rgba($primary-color, 0.9),
+      rgba($primary-color, 0.3)
+    ),
+    url("../img/model-1.jpg") center top;
+  background-size: cover;
 }
 
 h1,
@@ -21,6 +33,10 @@ a {
   text-decoration: none;
 }
 
+.text-secondary {
+  color: $secondary-color;
+}
+
 header {
   position: fixed;
   z-index: 2;
@@ -28,14 +44,19 @@ header {
   padding: 1rem;
 }
 
-main {
-  height: 100%;
-  width: 100%;
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  z-index: 2;
+  text-align: center;
+  padding: 1rem;
+  color: set-color($primary-color);
 
   .social-icons {
-    position: fixed;
-    bottom: 1rem;
-    left: 1rem;
+    margin-bottom: 1rem;
 
     a {
       padding: 0.4rem;
@@ -46,14 +67,4 @@ main {
       }
     }
   }
-}
-
-footer {
-  font-size: 1rem;
-  position: fixed;
-  bottom: 0.4rem;
-  right: 1rem;
-  text-align: right;
-  padding: 1rem;
-  color: set-color($primary-color);
 }
