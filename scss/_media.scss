@@ -1,0 +1,55 @@
+@include media-md {
+  header {
+    padding: 0;
+  }
+  .menu-btn {
+    visibility: hidden;
+  }
+
+  .nav {
+    visibility: visible;
+    position: fixed;
+
+    .menu-nav {
+      display: block;
+      transform: translateY(0);
+      height: 100%;
+      background: transparent;
+      text-align: center;
+      padding: 1rem;
+
+      &-item {
+        display: inline;
+      }
+
+      &-link {
+        display: inline;
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .about {
+    &-bio-image {
+      height: 50vh;
+    }
+  }
+
+  .projects {
+    &-bio-image {
+      height: 50vh;
+    }
+
+    &-items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include media-lg {
+  .projects {
+    &-items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

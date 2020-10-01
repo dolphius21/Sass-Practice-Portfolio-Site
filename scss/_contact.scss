@@ -1,0 +1,31 @@
+.contact {
+  margin-bottom: 2rem;
+  padding-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .text-secondary {
+      font-size: 1.25rem;
+    }
+
+    .fas {
+      margin-right: 1rem;
+    }
+  }
+}
