@@ -82,10 +82,19 @@
       transform: translateY(0);
     }
 
+    &-item {
+      transform: translateX(100vw);
+      @include transition-ease;
+
+      &.open {
+        transform: translateX(0);
+      }
+    }
+
     &-link {
       display: block;
       padding: 1rem;
-      font-size: 1.25rem;
+      font-size: 1.5rem;
 
       &:hover {
         color: $secondary-color;
@@ -95,5 +104,11 @@
     .active {
       color: $secondary-color;
     }
+  }
+}
+
+@for $i from 1 through 4 {
+  .menu-nav-item:nth-child(#{$i}) {
+    transition-delay: $i * 0.165s;
   }
 }
