@@ -9,6 +9,7 @@
   .nav {
     visibility: visible;
     position: fixed;
+    @include transition-ease;
 
     .menu-nav {
       display: block;
@@ -29,9 +30,19 @@
     }
   }
 
+  .sticky {
+    background: $primary-color;
+    box-shadow: 0 1px 5px 1px #000;
+  }
+
   .about {
     &-bio-image {
       height: 50vh;
+    }
+
+    &-bio,
+    .jobs {
+      width: 70vw;
     }
   }
 

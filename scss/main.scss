@@ -21,8 +21,7 @@ body {
       rgba($primary-color, 0.9),
       rgba($primary-color, 0.3)
     ),
-    url("../img/model-1.jpg") center top;
-  background-size: cover;
+    url("../img/model-1.jpg") center top/cover;
 }
 
 h1,

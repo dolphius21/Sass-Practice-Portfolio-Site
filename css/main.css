@@ -197,7 +197,7 @@
 }
 
 .about-bio {
-  width: 80%;
+  width: 80vw;
   text-align: center;
   margin: 2rem auto 0;
 }
@@ -207,7 +207,7 @@
 }
 
 .about .jobs {
-  width: 70vw;
+  width: 80vw;
   margin: 2rem auto 0 auto;
   display: -ms-grid;
   display: grid;
@@ -389,6 +389,8 @@
   .nav {
     visibility: visible;
     position: fixed;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   .nav .menu-nav {
     display: block;
@@ -406,8 +408,17 @@
     display: inline;
     font-size: 1.25rem;
   }
+  .sticky {
+    background: #272727;
+    -webkit-box-shadow: 0 1px 5px 1px #000;
+            box-shadow: 0 1px 5px 1px #000;
+  }
   .about-bio-image {
     height: 50vh;
+  }
+  .about-bio,
+  .about .jobs {
+    width: 70vw;
   }
   .projects-bio-image {
     height: 50vh;
@@ -435,9 +446,8 @@ body {
 .page-wrapper {
   height: 100vh;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/model-1.jpg") center top;
-  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg") center top;
-  background-size: cover;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../img/model-1.jpg") center top/cover;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg") center top/cover;
 }
 
 h1,

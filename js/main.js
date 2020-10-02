@@ -7,6 +7,7 @@ const navItems = document.querySelectorAll(".menu-nav-item");
 let showMenu = false;
 
 menuBtn.addEventListener("click", toggleMenu);
+window.addEventListener("scroll", showNav);
 
 function toggleMenu() {
   if (!showMenu) {
@@ -22,4 +23,8 @@ function toggleMenu() {
     navItems.forEach((item) => item.classList.remove("open"));
     showMenu = false;
   }
+}
+
+function showNav() {
+  nav.classList.toggle("sticky", window.scrollY > 0);
 }
